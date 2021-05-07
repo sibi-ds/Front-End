@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #78c4d4;
+}
+
+#container {
+  background-color: white;
+  width: 1100px;
+  height: 1290px;
+  margin: auto;
+}
+
+.resume {
+  background-color: #179498;
+  height: 100px;
+  width: 300px;
+  margin-left: 40px;
+}
+
+.resume-heading {
+  padding-top: 50px;
+  color: white;
+}
+
+.name {
+  color: #646464;
+  margin-left: 50px;
+  font-size: 50px;
+}
+
+.designation {
+  color: #646464;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+.content {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 37% 63%;
+}
+
+.heading {
+  font-size: 35px;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.resume-heading {
+    margin-top: 0px;
+}
+
+.field {
+  font-size: 25px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.value {
+  font-size: 25px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
+
+.left-div {
+  width: 300px;
+  height: 850px;
+  margin-left: 40px;
+  background-color: #179498;
+}
+
+.left-div-heading {
+  color: white;
+}
+
+.left-div-line {
+  border-top: 5px solid white;
+  width: 90%;
+  margin-left: 10px;
+  border-bottom-width: 0px;
+}
+
+.left-div-field {
+  color: white;
+}
+
+.left-div-value {
+  color: #7ae2e2;
+}
+
+.right-div {
+  width: 650px;
+  height: 850px;
+}
+
+.right-div-heading {
+  color: #179498;
+  margin-left: 0px;
+}
+
+.right-div-line {
+  border-top: 5px solid #179498;
+  width: 97%;
+}
+
+.right-div-field {
+  color: #646464;
+}
+
+.right-div-value {
+  color: #bcbcbc;
+}
+
+.job-experiences-wrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.education-wrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.skills-list {
+  color: #646464;
+  margin-left: 55px;
+  font-size: 30px;
+}
+
+.list-value {
+  margin-left: 0px;
+  margin-top: 5px;
+  padding-bottom: 0px;
+}
+
+.end {
+  background-color: #179498;
+  margin-top: 60px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 40% 25% 40%;
+}
+
+.end-div {
+  margin-top: 50px;
+}
+
+.end-field {
+  color: white;
+}
+
+.end-value {
+  color: #7ae2e2;
+  margin-left: 0px;
+}
