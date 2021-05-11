@@ -1,164 +1,162 @@
+@font-face {
+  src: url(../fonts/Rubik-VariableFont_wght.ttf);
+  font-family: rubik;
+}
+
 * {
   padding: 0;
   margin: 0;
 }
 
 body {
-  background-color: #78c4d4;
+  font-size: 200%;
+  line-height: 50px;
+  font-family: rubik;
 }
 
-#container {
-  background-color: white;
-  width: 1100px;
-  height: 1290px;
-  margin: auto;
-}
-
-.resume {
+body .header {
+  width: 27%;
+  height: 130px;
   background-color: #179498;
-  height: 100px;
-  width: 300px;
-  margin-left: 40px;
+  color: #ffff;
+  margin: 0px 0px 30px 20px;
+  padding-left: 20px;
 }
 
-.resume-heading {
-  padding-top: 50px;
-  color: white;
+body .header h2 {
+  padding-top: 60px;
 }
 
-.name {
-  color: #646464;
-  margin-left: 50px;
-  font-size: 50px;
+body .name {
+  color: #676767;
+  margin-left: 30px;
 }
 
-.designation {
-  color: #646464;
-  font-size: 30px;
-  margin-left: 50px;
+body .designation {
+  color: #a5a5a5;
+  margin-left: 30px;
 }
 
-.content {
-  margin-top: 25px;
-  display: grid;
-  grid-template-columns: 37% 63%;
+body .container {
+  margin: 30px 0px 80px 0px;
 }
 
-.heading {
-  font-size: 35px;
-  margin-left: 10px;
+body .container .personal-information {
+  display: inline-block;
+  background-color: #179498;
+  margin-left: 20px;
+  width: 25%;
+  padding: 40px 30px 50px 20px;
+}
+
+body .container .personal-information .personal-information-title {
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  color: #ffff;
+}
+
+body .container .personal-information .personal-information-details {
+  margin: 40px 0px 40px 20px;
+}
+
+body .container .personal-information .label {
+  color: #ffff;
   margin-top: 30px;
 }
 
-.resume-heading {
-    margin-top: 0px;
+body .container .personal-information .value {
+  color: #78c4d4;
 }
 
-.field {
-  font-size: 25px;
-  margin-left: 20px;
-  margin-top: 20px;
+body .container .career-information {
+  display: inline-block;
+  vertical-align: top;
+  padding: 40px 0px 0px 40px;
+  width: 60%;
 }
 
-.value {
-  font-size: 25px;
-  margin-left: 20px;
-  padding-bottom: 10px;
-}
-
-.left-div {
-  width: 300px;
-  height: 850px;
-  margin-left: 40px;
-  background-color: #179498;
-}
-
-.left-div-heading {
-  color: white;
-}
-
-.left-div-line {
-  border-top: 5px solid white;
-  width: 90%;
-  margin-left: 10px;
-  border-bottom-width: 0px;
-}
-
-.left-div-field {
-  color: white;
-}
-
-.left-div-value {
-  color: #7ae2e2;
-}
-
-.right-div {
-  width: 650px;
-  height: 850px;
-}
-
-.right-div-heading {
+body .container .career-information .career-information-title {
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
   color: #179498;
-  margin-left: 0px;
+  width: 100%;
 }
 
-.right-div-line {
-  border-top: 5px solid #179498;
-  width: 97%;
+body .container .career-information .career-information-details {
+  margin: 40px 0px 0px 20px;
 }
 
-.right-div-field {
-  color: #646464;
+body .container .career-information .career-information-details .skills-title {
+  color: #676767;
 }
 
-.right-div-value {
-  color: #bcbcbc;
+body .container .career-information .career-information-details .print-list {
+  vertical-align: top;
+  display: inline-block;
+  width: 49%;
 }
 
-.job-experiences-wrapper {
-  display: grid;
-  grid-template-columns: 30% 70%;
+body .container .career-information .career-information-details .print-list .skills-list {
+  margin-left: 35px;
 }
 
-.education-wrapper {
-  display: grid;
-  grid-template-columns: 30% 70%;
+body .container .career-information .career-information-details .web-and-multimedia-list {
+  vertical-align: top;
+  display: inline-block;
+  width: 49%;
 }
 
-.skills-wrapper {
-  display: grid;
-  grid-template-columns: 50% 50%;
+body .container .career-information .career-information-details .web-and-multimedia-list .skills-list {
+  margin-left: 35px;
 }
 
-.skills-list {
-  color: #646464;
-  margin-left: 55px;
-  font-size: 30px;
+body .container .career-information .duration {
+  vertical-align: top;
+  display: inline-block;
+  color: #676767;
+  width: 25%;
 }
 
-.list-value {
-  margin-left: 0px;
-  margin-top: 5px;
-  padding-bottom: 0px;
+body .container .career-information .place {
+  vertical-align: top;
+  display: inline-block;
+  width: auto;
+  color: #676767;
+  padding-bottom: 40px;
 }
 
-.end {
+body .container .career-information .place .role {
+  color: #a5a5a5;
+}
+
+body .container .career-information .place .degree {
+  color: #a5a5a5;
+}
+
+body .container .career-information li {
+  color: #676767;
+}
+
+body .container .career-information li p {
+  color: #a5a5a5;
+}
+
+body .footer {
   background-color: #179498;
-  margin-top: 60px;
+  width: 100%;
   height: 150px;
-  display: grid;
-  grid-template-columns: 40% 25% 40%;
 }
 
-.end-div {
-  margin-top: 50px;
+body .footer .footer-element {
+  display: inline-block;
+  margin: 60px 0px 0px 80px;
 }
 
-.end-field {
-  color: white;
+body .footer .footer-element .label {
+  color: #ffff;
 }
 
-.end-value {
-  color: #7ae2e2;
-  margin-left: 0px;
+body .footer .footer-element .value {
+  color: #78c4d4;
 }
+/*# sourceMappingURL=styles.css.map */
