@@ -1,80 +1,171 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+
+i {
+  padding: 10px 10px 10px 10px;
 }
 
 .navigation-bar {
-    height: 80px;
-    background-color: #1386EC;
+  height: auto;
+  background-color: #1386ec;
+  padding: 15px 15px 15px 15px;
+}
+
+.navigation-bar .search-bar {
+  display: inline-block;
+  background-color: #ffff;
+  margin-left: 35%;
+}
+
+.navigation-bar .fa-cog {
+  margin-left: 34%;
+}
+
+.navigation-bar span {
+  font-size: 20px;
 }
 
 .left-container {
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    height: auto;
-    background-color: #eeeeee;
+  display: inline-block;
+  vertical-align: top;
+  width: 17%;
+  background-color: #eeeeee;
+  height: 690px;
+}
+
+.left-container i {
+  width: 10%;
 }
 
 .left-container ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .left-container ul li {
-    width: auto;
-    padding: 15px 0px 15px 0px;
-}
-
-.left-container ul li i {
-    margin: 0px 20px 0px 20px;
+  padding: 10px 10px 10px 10px;
 }
 
 .left-container ul li:hover {
-    background-color: #1386EC;
-    cursor: pointer;
+  background-color: #1386ec;
+  cursor: pointer;
 }
 
 .left-container .custom-categories {
-    width: auto;
-    padding: 15px 0px 15px 20px;
+  padding: 10px 10px 10px 10px;
 }
 
 .left-container .custom-categories input {
-    margin-left: 10px;
-    height: 30px;
-    width: 80%;
+  background-color: #eeeeee;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
+
+.input {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  width: 100%;
+  padding: 10px 0px 10px 10px;
 }
 
 .middle-container {
-    display: inline-block;
-    vertical-align: top;
-    padding: 15px 0px 15px 15px;;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 10px 10px 10px;
+  width: 80%;
 }
 
-.middle-container input {
-    padding: 10px 0px 10px 10px ;
+.middle-container h3 {
+  padding: 10px 10px 10px 0px;
+  color: #1386ec;
 }
 
 .middle-container ul {
-    list-style-type: none;
-    line-height: 20px;
-    font-size: 20px;
-}
-
-.middle-container ul h3 {
-    color: #1386EC;
-    padding: 10px 0px 10px 10px ;
+  list-style-type: none;
+  line-height: 20px;
 }
 
 .middle-container ul li {
-    padding: 10px 0px 10px 10px ;
+  padding: 10px 0px 10px 10px;
+  border-bottom-style: solid;
+  border-width: 1px;
+  width: 100%;
 }
 
-.middle-container ul li input {
-    margin-right: 10px;
+.middle-container ul li:hover {
+  background-color: #1386ec;
+  cursor: pointer;
+}
+
+.middle-container ul li span {
+  display: inline-block;
+}
+
+.middle-container ul li i {
+  float: right;
 }
 
 .right-container {
-    display: inline-block;
-    vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+  padding: 10px 10px 10px 10px;
+  background-color: #eeeeee;
+  width: 23.5%;
+  height: 670px;
+  display: none;
 }
+
+.right-container h3 {
+  color: #1386ec;
+  padding: 10px 10px 10px 0px;
+}
+
+.right-container ul {
+  list-style-type: none;
+  line-height: 20px;
+}
+
+.right-container ul li {
+  padding: 10px 0px 10px 10px;
+  border-bottom-style: solid;
+  border-width: 1px;
+  width: 100%;
+  background-color: white;
+}
+
+.right-container i {
+  width: 10%;
+}
+
+.right-container .extra-sub-tasks {
+  margin-top: 20px;
+}
+
+.right-container .extra-sub-tasks .extra-sub-task {
+  display: block;
+  width: 100%;
+  background-color: white;
+  margin: 10px 0px 10px 0px;
+}
+
+.right-container .extra-sub-tasks .reminder span {
+  display: block;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  background-color: white;
+}
+/*# sourceMappingURL=styles.css.map */
