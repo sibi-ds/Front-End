@@ -7,6 +7,10 @@ $text-color: #1386ec;
   padding: 0;
 }
 
+body {
+  background-color: $secondary-color;
+}
+
 input {
   outline: none;
   border: none;
@@ -14,7 +18,7 @@ input {
 }
 
 i {
-  padding: 10px 10px 10px 10px;
+  padding: 15px 15px 15px 15px;
 }
 
 .navigation-bar {
@@ -25,11 +29,11 @@ i {
   .search-bar {
     display: inline-block;
     background-color: $primary-color;
-    margin-left: 35%;
+    margin-left: 33%;
   }
 
   .fa-cog {
-    margin-left: 34%;
+    margin-left: 32%;
   }
 
   span {
@@ -40,20 +44,18 @@ i {
 .left-container {
   display: inline-block;
   vertical-align: top;
-  width: 17%;
   background-color: $secondary-color;
-  height: 690px;
+  height: 650px;
+  width: 17%;
 
   i {
-    width: 10%;
+    width: 7%;
   }
 
   ul {
     list-style-type: none;
 
     li {
-      padding: 10px 10px 10px 10px;
-
       &:hover {
         background-color: $text-color;
         cursor: pointer;
@@ -62,8 +64,6 @@ i {
   }
 
   .custom-categories {
-    padding: 10px 10px 10px 10px;
-
     input {
       background-color: $secondary-color;
     }
@@ -79,37 +79,29 @@ input[type="checkbox"] {
     }
   }
 
-  margin-right: 10px;
+  margin: 15px 15px 15px 15px;
 }
 
-.input {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  width: 100%;
-
-  padding: 10px 0px 10px 10px;
+h3 {
+  padding: 15px 15px 15px 15px;
+  color: $text-color;
 }
 
 .middle-container {
   display: inline-block;
   vertical-align: top;
-  padding: 10px 10px 10px 10px;
-  width: 80%;
-
-  h3 {
-    padding: 10px 10px 10px 0px;
-    color: $text-color;
-  }
+  height: 650px;
+  width: 80.5%;
+  background-color: $primary-color;
+  padding: 15px 15px 15px 15px;
 
   ul {
     list-style-type: none;
-    line-height: 20px;
+    background-color: $primary-color;
 
     li {
-      padding: 10px 0px 10px 10px;
       border-bottom-style: solid;
-      border-width: 1px;
-      width: 100%;
+      border-bottom-width: 1px;
 
       &:hover {
         background-color: $text-color;
@@ -118,10 +110,7 @@ input[type="checkbox"] {
 
       span {
         display: inline-block;
-      }
-
-      i {
-        float: right;
+        width: 90%;
       }
     }
   }
@@ -130,43 +119,42 @@ input[type="checkbox"] {
 .right-container {
   display: inline-block;
   vertical-align: top;
-  margin-left: 20px;
-  padding: 10px 10px 10px 10px;
   background-color: $secondary-color;
-  width: 23.5%;
-  height: 670px;
   display: none;
+  width: 17%;
+  padding: 15px 15px 15px 15px;
 
   h3 {
-    color: $text-color;
-    padding: 10px 10px 10px 0px;
+    input {
+      margin: 0px 15px 0px 0px;
+    }
   }
 
   ul {
     list-style-type: none;
-    line-height: 20px;
+    background-color: white;
 
     li {
-      padding: 10px 0px 10px 10px;
       border-bottom-style: solid;
       border-width: 1px;
-      width: 100%;
-      background-color: white;
     }
-  }
-
-  i {
-    width: 10%;
   }
 
   .extra-sub-tasks {
     margin-top: 20px;
 
+    i {
+      width: 10%;
+    }
+
     .extra-sub-task {
       display: block;
-      width: 100%;
       background-color: white;
-      margin: 10px 0px 10px 0px;
+      margin-top: 15px;
+    }
+
+    .reminder {
+      margin-top: 15px;
     }
 
     .reminder span {

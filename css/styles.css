@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #eeeeee;
+}
+
 input {
   outline: none;
   border: none;
@@ -10,7 +14,7 @@ input {
 }
 
 i {
-  padding: 10px 10px 10px 10px;
+  padding: 15px 15px 15px 15px;
 }
 
 .navigation-bar {
@@ -22,11 +26,11 @@ i {
 .navigation-bar .search-bar {
   display: inline-block;
   background-color: #ffff;
-  margin-left: 35%;
+  margin-left: 33%;
 }
 
 .navigation-bar .fa-cog {
-  margin-left: 34%;
+  margin-left: 32%;
 }
 
 .navigation-bar span {
@@ -36,21 +40,17 @@ i {
 .left-container {
   display: inline-block;
   vertical-align: top;
-  width: 17%;
   background-color: #eeeeee;
-  height: 690px;
+  height: 650px;
+  width: 17%;
 }
 
 .left-container i {
-  width: 10%;
+  width: 7%;
 }
 
 .left-container ul {
   list-style-type: none;
-}
-
-.left-container ul li {
-  padding: 10px 10px 10px 10px;
 }
 
 .left-container ul li:hover {
@@ -58,51 +58,40 @@ i {
   cursor: pointer;
 }
 
-.left-container .custom-categories {
-  padding: 10px 10px 10px 10px;
-}
-
 .left-container .custom-categories input {
   background-color: #eeeeee;
 }
 
 input[type="checkbox"] {
-  margin-right: 10px;
+  margin: 15px 15px 15px 15px;
 }
 
 input[type="checkbox"]:checked + span {
   text-decoration: line-through;
 }
 
-.input {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  width: 100%;
-  padding: 10px 0px 10px 10px;
+h3 {
+  padding: 15px 15px 15px 15px;
+  color: #1386ec;
 }
 
 .middle-container {
   display: inline-block;
   vertical-align: top;
-  padding: 10px 10px 10px 10px;
-  width: 80%;
-}
-
-.middle-container h3 {
-  padding: 10px 10px 10px 0px;
-  color: #1386ec;
+  height: 650px;
+  width: 80.5%;
+  background-color: #ffff;
+  padding: 15px 15px 15px 15px;
 }
 
 .middle-container ul {
   list-style-type: none;
-  line-height: 20px;
+  background-color: #ffff;
 }
 
 .middle-container ul li {
-  padding: 10px 0px 10px 10px;
   border-bottom-style: solid;
-  border-width: 1px;
-  width: 100%;
+  border-bottom-width: 1px;
 }
 
 .middle-container ul li:hover {
@@ -112,54 +101,48 @@ input[type="checkbox"]:checked + span {
 
 .middle-container ul li span {
   display: inline-block;
-}
-
-.middle-container ul li i {
-  float: right;
+  width: 90%;
 }
 
 .right-container {
   display: inline-block;
   vertical-align: top;
-  margin-left: 20px;
-  padding: 10px 10px 10px 10px;
   background-color: #eeeeee;
-  width: 23.5%;
-  height: 670px;
   display: none;
+  width: 17%;
+  padding: 15px 15px 15px 15px;
 }
 
-.right-container h3 {
-  color: #1386ec;
-  padding: 10px 10px 10px 0px;
+.right-container h3 input {
+  margin: 0px 15px 0px 0px;
 }
 
 .right-container ul {
   list-style-type: none;
-  line-height: 20px;
-}
-
-.right-container ul li {
-  padding: 10px 0px 10px 10px;
-  border-bottom-style: solid;
-  border-width: 1px;
-  width: 100%;
   background-color: white;
 }
 
-.right-container i {
-  width: 10%;
+.right-container ul li {
+  border-bottom-style: solid;
+  border-width: 1px;
 }
 
 .right-container .extra-sub-tasks {
   margin-top: 20px;
 }
 
+.right-container .extra-sub-tasks i {
+  width: 10%;
+}
+
 .right-container .extra-sub-tasks .extra-sub-task {
   display: block;
-  width: 100%;
   background-color: white;
-  margin: 10px 0px 10px 0px;
+  margin-top: 15px;
+}
+
+.right-container .extra-sub-tasks .reminder {
+  margin-top: 15px;
 }
 
 .right-container .extra-sub-tasks .reminder span {

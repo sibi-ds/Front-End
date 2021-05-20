@@ -94,19 +94,24 @@
         var middleContainer = document.getElementsByClassName("middle-container")[0];
         var tasks = document.getElementsByClassName("tasks")[0];
         var rightContainer = document.getElementsByClassName("right-container")[0];
-       deleteChild(tasks);
+        deleteChild(tasks);
         rightContainer.style.display = "none";
-        middleContainer.style.width = "80%";
+        middleContainer.style.width = "80.5%";
 
         for (var i = 0; i < categories.length; i++) {
             if (id === categories[i].name) {
-                var header = document.createElement("h3");
-                header.appendChild(document.createTextNode(id));
-                tasks.appendChild(header);
+                var heading = document.createElement("h3");
+                heading.appendChild(document.createTextNode(id));
+                tasks.appendChild(heading);
+                var span = document.createElement("span");
+                var icon = document.createElement("i");
+                icon.className = "fas fa-plus";
+                span.appendChild(icon);
                 var newTask = document.createElement("input");
                 newTask.placeholder = "New Task";
-                newTask.className = "new-task input";
-                tasks.appendChild(newTask);
+                newTask.className = "new-task";
+                span.appendChild(newTask);
+                tasks.appendChild(span);
 
                 var taskId = 1;
 
@@ -119,7 +124,7 @@
                     if (event.target.tagName === "SPAN") {
                         renderSubTasks(event.target.textContent);
                         console.log(event.target.textContent);
-                        middleContainer.style.width = "55%";
+                        middleContainer.style.width = "61.5%";
                         rightContainer.style.display = "inline-block";
                     }
                 });
@@ -182,10 +187,15 @@
         header.appendChild(checkBox);
         header.appendChild(document.createTextNode(name));
         subTasksList.appendChild(header);
+        var span = document.createElement("span");
+        var icon = document.createElement("i");
+        icon.className = "fas fa-plus";
+        span.appendChild(icon);
         var subTaskInput = document.createElement("input");
         subTaskInput.placeholder = "New Sub Task";
-        subTaskInput.className = "new-sub-task input";
-        subTasksList.appendChild(subTaskInput);
+        subTaskInput.className = "new-sub-task";
+        span.appendChild(subTaskInput);
+        subTasksList.appendChild(span);
 
         categories.forEach((category) => {
             category.tasks.forEach((task) => {
