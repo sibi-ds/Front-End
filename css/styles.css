@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+input {
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+
+i {
+  padding: 15px 15px 15px 15px;
+}
+
+.navigation-bar {
+  height: auto;
+  background-color: #1386ec;
+  padding: 15px 15px 15px 15px;
+}
+
+.navigation-bar .search-bar {
+  display: inline-block;
+  background-color: #ffff;
+  margin-left: 33%;
+}
+
+.navigation-bar .fa-cog {
+  margin-left: 32%;
+}
+
+.navigation-bar span {
+  font-size: 20px;
+}
+
+.left-container {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #eeeeee;
+  height: 650px;
+  width: 17%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.left-container i {
+  width: 7%;
+}
+
+.left-container ul {
+  list-style-type: none;
+}
+
+.left-container ul li:hover {
+  background-color: #1386ec;
+  cursor: pointer;
+}
+
+.left-container .custom-categories input {
+  background-color: #eeeeee;
+}
+
+input[type="checkbox"] {
+  margin: 15px 15px 15px 15px;
+}
+
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
+
+h3 {
+  padding: 15px 15px 15px 15px;
+  color: #1386ec;
+}
+
+.middle-container {
+  display: inline-block;
+  vertical-align: top;
+  height: 650px;
+  width: 80.5%;
+  background-color: #ffff;
+  padding: 15px 15px 15px 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.middle-container ul {
+  list-style-type: none;
+  background-color: #ffff;
+}
+
+.middle-container ul li {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.middle-container ul li:hover {
+  background-color: #1386ec;
+  cursor: pointer;
+}
+
+.middle-container ul li span {
+  display: inline-block;
+  width: 90%;
+}
+
+.right-container {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #eeeeee;
+  display: none;
+  width: 17%;
+  padding: 15px 15px 15px 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.right-container .new-sub-task {
+  background-color: #eeeeee;
+}
+
+.right-container h3 input {
+  margin: 0px 15px 0px 0px;
+}
+
+.right-container ul {
+  list-style-type: none;
+  background-color: #ffff;
+}
+
+.right-container ul li {
+  border-bottom-style: solid;
+  border-width: 1px;
+}
+
+.right-container .extra-sub-tasks {
+  margin-top: 20px;
+}
+
+.right-container .extra-sub-tasks i {
+  width: 10%;
+}
+
+.right-container .extra-sub-tasks .extra-sub-task {
+  display: block;
+  background-color: #ffff;
+  margin-top: 15px;
+}
+
+.right-container .extra-sub-tasks .reminder {
+  margin-top: 15px;
+}
+
+.right-container .extra-sub-tasks .reminder span {
+  display: block;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  background-color: #ffff;
+}
+
+.right-container .extra-sub-tasks textarea {
+  margin-top: 15px;
+}
+/*# sourceMappingURL=styles.css.map */

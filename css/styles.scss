@@ -1,0 +1,181 @@
+$primary-color: #ffff;
+$secondary-color: #eeeeee;
+$text-color: #1386ec;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $secondary-color;
+}
+
+input {
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+
+i {
+  padding: 15px 15px 15px 15px;
+}
+
+.navigation-bar {
+  height: auto;
+  background-color: $text-color;
+  padding: 15px 15px 15px 15px;
+
+  .search-bar {
+    display: inline-block;
+    background-color: $primary-color;
+    margin-left: 33%;
+  }
+
+  .fa-cog {
+    margin-left: 32%;
+  }
+
+  span {
+    font-size: 20px;
+  }
+}
+
+.left-container {
+  display: inline-block;
+  vertical-align: top;
+  background-color: $secondary-color;
+  height: 650px;
+  width: 17%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  i {
+    width: 7%;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      &:hover {
+        background-color: $text-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .custom-categories {
+    input {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  &:checked {
+    + {
+      span {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  margin: 15px 15px 15px 15px;
+}
+
+h3 {
+  padding: 15px 15px 15px 15px;
+  color: $text-color;
+}
+
+.middle-container {
+  display: inline-block;
+  vertical-align: top;
+  height: 650px;
+  width: 80.5%;
+  background-color: $primary-color;
+  padding: 15px 15px 15px 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  ul {
+    list-style-type: none;
+    background-color: $primary-color;
+
+    li {
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+
+      &:hover {
+        background-color: $text-color;
+        cursor: pointer;
+      }
+
+      span {
+        display: inline-block;
+        width: 90%;
+      }
+    }
+  }
+}
+
+.right-container {
+  display: inline-block;
+  vertical-align: top;
+  background-color: $secondary-color;
+  display: none;
+  width: 17%;
+  padding: 15px 15px 15px 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .new-sub-task {
+    background-color: $secondary-color;
+  }
+
+  h3 {
+    input {
+      margin: 0px 15px 0px 0px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    background-color: $primary-color;
+
+    li {
+      border-bottom-style: solid;
+      border-width: 1px;
+    }
+  }
+
+  .extra-sub-tasks {
+    margin-top: 20px;
+
+    i {
+      width: 10%;
+    }
+
+    .extra-sub-task {
+      display: block;
+      background-color: $primary-color;
+      margin-top: 15px;
+    }
+
+    .reminder {
+      margin-top: 15px;
+    }
+
+    .reminder span {
+      display: block;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      background-color: $primary-color;
+    }
+
+    textarea {
+      margin-top: 15px;
+    }
+  }
+}

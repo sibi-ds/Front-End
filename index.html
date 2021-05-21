@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="navigation-bar">
+        <i class="fas fa-th"></i>
+
+        <span>To Do</span>
+
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text">
+        </div>
+
+        <i class="fas fa-cog"></i>
+
+        <i class="fas fa-question"></i>
+
+        <i class="fas fa-bullhorn"></i>
+
+        <span>Ⓢ</span>
+    </div>
+
+    <div class="left-container">
+        <ul class="categories"></ul>
+
+        <div class="custom-categories">
+            <i class="fas fa-plus"></i>
+            <input class="new-category" type="text" placeholder="New List">
+        </div>
+    </div>
+
+    <div class="middle-container">
+        <h3 class="category-name">Untitled</h3>
+
+        <span><i class="fas fa-plus"></i><input class="new-task" placeholder="Add Task"></span>
+
+        <ul class="tasks"></ul>
+    </div>
+
+    <div class="right-container">
+        <h3 class="task-name"><input type="checkbox">Untitled</h3>
+
+        <span><i class="fas fa-plus"></i><input class="new-sub-task" placeholder="Add Step"></span>
+
+        <ul class="sub-tasks"></ul>
+
+        <div class="extra-sub-tasks">
+            <span class=extra-sub-task><i class="fas fa-sun"></i>Add To My Day</span>
+
+            <div class="reminder">
+                <span><i class="fas fa-bell"></i>Remind Me</span>
+                <span><i class="fas fa-calendar-alt"></i>Add To Due Date</span>
+                <span><i class="fas fa-redo"></i>Repeat</span>
+            </div>
+
+            <span class=extra-sub-task><i class="fas fa-tags"></i>Pick A Category</span>
+
+            <span class=extra-sub-task><i class="fas fa-file-word"></i>Add file</span>
+
+            <textarea cols="36" rows="10"></textarea>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="javascript/actions.js"></script>
+</body>
+
+</html>
