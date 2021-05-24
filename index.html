@@ -18,11 +18,11 @@
         <span>To Do</span>
 
         <div class="search-bar">
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search search-icon"></i>
             <input type="text">
         </div>
 
-        <i class="fas fa-cog"></i>
+        <i class="fas fa-cog setting-icon"></i>
 
         <i class="fas fa-question"></i>
 
@@ -41,26 +41,32 @@
     </div>
 
     <div class="middle-container">
-        <h3 class="category-name">Untitled</h3>
+        <span class="category-name">Untitled</span>
 
-        <span><i class="fas fa-plus"></i><input class="new-task" placeholder="Add Task"></span>
+        <span><i class="fas fa-plus"></i><input  class="new-task" placeholder="Add Task"><hr></span>
 
         <ul class="tasks"></ul>
     </div>
 
     <div class="right-container">
-        <h3 class="task-name"><input type="checkbox">Untitled</h3>
+        <div class="sub-tasks">
+            <div class="sub-tasks-heading">
+                <input class="task-name-checkbox" type="checkbox"><span class="task-name">Untitled</span><i class="far fa-star"></i>
+            </div>
 
-        <span><i class="fas fa-plus"></i><input class="new-sub-task" placeholder="Add Step"></span>
+            <ul class="sub-tasks-list"></ul>
 
-        <ul class="sub-tasks"></ul>
+            <span><i class="fas fa-plus"></i><input class="new-sub-task" placeholder="Add Step"></span>
+        </div>
 
         <div class="extra-sub-tasks">
             <span class=extra-sub-task><i class="fas fa-sun"></i>Add To My Day</span>
 
             <div class="reminder">
-                <span><i class="fas fa-bell"></i>Remind Me</span>
-                <span><i class="fas fa-calendar-alt"></i>Add To Due Date</span>
+                <span><i class="fas fa-bell"></i>Remind Me<hr></span>
+                
+                <span><i class="fas fa-calendar-alt"></i>Add To Due Date<hr></span>
+                
                 <span><i class="fas fa-redo"></i>Repeat</span>
             </div>
 

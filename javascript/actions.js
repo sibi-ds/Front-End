@@ -1,5 +1,5 @@
 (function () {
-    var categories = [
+    let categories = [
         {
             name: "My Day",
             icon: "fas fa-sun",
@@ -38,7 +38,7 @@
         tasks.click(selectTask);
         taskInput.keypress(addTask);
         subTaskInput.keypress(addSubTask);
-        middleContainer.hide();
+        renderTasks("My Day");
     }
 
     const leftContainer = $('.left-container');
@@ -48,14 +48,14 @@
     const tasks = $('.tasks');
     const taskInput = $('.new-task');
     const rightContainer = $('.right-container');
-    const subTasksList = $('.sub-tasks');
+    const subTasksList = $('.sub-tasks-list');
     const subTaskInput = $('.new-sub-task');
 
     /**
      * render pre defined categories
      */
     function renderCategories() {
-        for (var i = 0; i < categories.length; i++) {
+        for (let i = 0; i < categories.length; i++) {
             categoriesList.append(renderCategory(categories[i].name, categories[i].icon));
         }
     }
@@ -84,7 +84,6 @@
         if (event.target.tagName === "LI") {
             tasks.text("");
             renderTasks(event.target.textContent);
-            middleContainer.show();
         }
     }
 
@@ -114,10 +113,10 @@
     function renderTasks(categoryName) {
         $('.category-name').text(categoryName);
         $('.new-task').attr("id", categoryName);
-        rightContainer.css("display", "none");
-        middleContainer.css("width", "80.5%");
+        middleContainer.removeClass("shrunk-middle-container");
+        rightContainer.removeClass("expanded-right-container");
 
-        for (var i = 0; i < categories.length; i++) {
+        for (let i = 0; i < categories.length; i++) {
             if (categoryName === categories[i].name) {
                 categories[i].tasks.forEach((task) => {
                     tasks.append(renderTask(task.name, categoryName));
@@ -136,8 +135,8 @@
      * @return list element of a task
      */
     function renderTask(taskName, categoryName) {
-        var task = $('<li/>');
-        task.append($('<input/>').attr("type", "checkbox"));
+        let task = $('<li/>');
+        task.append($('<input/>').attr("type", "checkbox").addClass(taskName));
         task.append($('<span/>').append(taskName).addClass(categoryName));
         task.append($('<icon/>').addClass("far fa-star"));
         return task;
@@ -151,10 +150,37 @@
     function selectTask(event) {
         if (event.target.tagName === "SPAN") {
             subTasksList.text("");
+            console.log(event.target);
             renderSubTasks(event.target.textContent);
-            middleContainer.css("width", "61.5%");
-            rightContainer.css("display", "inline-block");
+            middleContainer.addClass("shrunk-middle-container");
+            rightContainer.addClass("expanded-right-container");
         }
+
+        if (event.target.tagName === "INPUT") {
+            if(event.target.checked === true && 
+                  event.target.nextSibling.textContent === $('.task-name-checkbox').next().text()) {
+                $('.task-name-checkbox').prop("checked", true);
+            } else {
+                $('.task-name-checkbox').prop("checked", false);
+            }
+        }
+
+        // if (event.target.tagName === "ICON") {
+        //     console.log(event.target.previousSibling.textContent,event.target.previousSibling.className);
+        //     event.target.className = "fas fa-star";
+
+        //     categories.forEach((category) => {
+        //         if (category.name === event.target.previousSibling.className) {
+        //             category.tasks.forEach((task) => {
+        //                 console.log(category.tasks)
+        //                 if (task.name === event.target.previousSibling.textContent) {
+        //                     categories[1].tasks.push(task);
+        //                 }
+        //             });
+        //         }
+        //     });
+        //     console.log(event.target);
+        // }
     }
 
     /**
@@ -164,7 +190,7 @@
      */
     function addTask(event) {
         if ("Enter" === event.key) {
-            for (var i = 0; i < categories.length; i++) {
+            for (let i = 0; i < categories.length; i++) {
                 if (event.target.id === categories[i].name) {
                     if ("" === event.target.value) {
                         alert("Task Name Can Not Be Empty");
@@ -193,7 +219,7 @@
         categories.forEach((category) => {
             category.tasks.forEach((task) => {
                 if (name === task.name) {
-                    for (var i = 0; i < task.subTasks.length; i++) {
+                    for (let i = 0; i < task.subTasks.length; i++) {
                         subTasksList.append(renderSubTask(task.subTasks[i]));
                     }
                 }
@@ -209,7 +235,7 @@
     function addSubTask(event) {
         if ("Enter" === event.key) {
             categories.forEach((category) => {
-                for (var i = 0; i < category.tasks.length; i++) {
+                for (let i = 0; i < category.tasks.length; i++) {
                     if (event.target.id === category.tasks[i].name) {
                         category.tasks[i].subTasks.push(event.target.value);
                         break;
@@ -229,9 +255,9 @@
      * @return list element of a subtask
      */
     function renderSubTask(subTaskName) {
-        var subTask = $('<li/>');
+        let subTask = $('<li/>');
         subTask.append($('<input/>').attr("type", "checkbox"));
-        subTask.append($('<span/>').append(subTaskName));
+        subTask.append($('<span/>').append(subTaskName)).append($('<hr/>'));
         return subTask;
     }
 

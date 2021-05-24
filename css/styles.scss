@@ -1,6 +1,8 @@
 $primary-color: #ffff;
-$secondary-color: #eeeeee;
-$text-color: #1386ec;
+$secondary-color: #f0f0f0;
+$heading-color: #1386ec;
+$search-bar-color: #03c8fc;
+$category-color: #5e5d5f;
 
 * {
   margin: 0;
@@ -8,174 +10,216 @@ $text-color: #1386ec;
 }
 
 body {
+  font-family: "Segoe UI";
   background-color: $secondary-color;
-}
 
-input {
-  outline: none;
-  border: none;
-  font-size: 15px;
-}
-
-i {
-  padding: 15px 15px 15px 15px;
-}
-
-.navigation-bar {
-  height: auto;
-  background-color: $text-color;
-  padding: 15px 15px 15px 15px;
-
-  .search-bar {
-    display: inline-block;
-    background-color: $primary-color;
-    margin-left: 33%;
+  input {
+    outline: none;
+    border: none;
+    font-size: 15px;
   }
-
-  .fa-cog {
-    margin-left: 32%;
-  }
-
-  span {
-    font-size: 20px;
-  }
-}
-
-.left-container {
-  display: inline-block;
-  vertical-align: top;
-  background-color: $secondary-color;
-  height: 650px;
-  width: 17%;
-  overflow-y: auto;
-  overflow-x: hidden;
 
   i {
-    width: 7%;
+    padding: 15px 15px 15px 15px;
   }
 
   ul {
     list-style-type: none;
+  }
 
-    li {
-      &:hover {
-        background-color: $text-color;
-        cursor: pointer;
+  .navigation-bar {
+    height: auto;
+    background-color: $heading-color;
+
+    i , span {
+      color: $primary-color;
+    }
+
+    .search-bar {
+      display: inline-block;
+      background-color: $search-bar-color;
+      margin-left: 30%;
+      width: 25%;
+
+      .search-icon {
+        color: $heading-color;
+        padding: 5px;
+      }
+
+      input {
+        background-color: $search-bar-color;
       }
     }
-  }
 
-  .custom-categories {
-    input {
-      background-color: $secondary-color;
+    .setting-icon {
+      margin-left: 27%;
     }
-  }
-}
 
-input[type="checkbox"] {
-  &:checked {
-    + {
-      span {
-        text-decoration: line-through;
-      }
+    span {
+      font-size: 20px;
     }
   }
 
-  margin: 15px 15px 15px 15px;
-}
-
-h3 {
-  padding: 15px 15px 15px 15px;
-  color: $text-color;
-}
-
-.middle-container {
-  display: inline-block;
-  vertical-align: top;
-  height: 650px;
-  width: 80.5%;
-  background-color: $primary-color;
-  padding: 15px 15px 15px 15px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  i {
+    color: $category-color;
+  }
 
   ul {
-    list-style-type: none;
-    background-color: $primary-color;
-
     li {
-      border-bottom-style: solid;
-      border-bottom-width: 1px;
-
-      &:hover {
-        background-color: $text-color;
-        cursor: pointer;
-      }
-
-      span {
-        display: inline-block;
-        width: 90%;
-      }
+      color: $category-color;
     }
   }
-}
 
-.right-container {
-  display: inline-block;
-  vertical-align: top;
-  background-color: $secondary-color;
-  display: none;
-  width: 17%;
-  padding: 15px 15px 15px 15px;
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  .new-sub-task {
+  .left-container {
+    display: inline-block;
+    vertical-align: top;
     background-color: $secondary-color;
-  }
-
-  h3 {
-    input {
-      margin: 0px 15px 0px 0px;
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    background-color: $primary-color;
-
-    li {
-      border-bottom-style: solid;
-      border-width: 1px;
-    }
-  }
-
-  .extra-sub-tasks {
-    margin-top: 20px;
+    height: auto;
+    width: 17%;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     i {
-      width: 10%;
+      width: 20px;
     }
 
-    .extra-sub-task {
+    ul {
+      li {
+        &:hover {
+          background-color: $primary-color;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .custom-categories {
+      input {
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    &:checked {
+      + {
+        span {
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    margin: 15px 15px 15px 15px;
+  }
+
+  .middle-container {
+    display: inline-block;
+    vertical-align: top;
+    height: 680px;
+    width: 80.5%;
+    background-color: $primary-color;
+    padding: 15px 15px 15px 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .category-name {
+      padding: 15px;
       display: block;
+    }
+
+    ul {
+      li {
+        border-bottom: 1px solid;
+
+        &:hover {
+          background-color: $secondary-color;
+          cursor: pointer;
+        }
+
+        span {
+          display: inline-block;
+          width: 90%;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .shrunk-middle-container {
+    width: 61.5%;
+  }
+
+  .right-container {
+    display: inline-block;
+    vertical-align: top;
+    background-color: $secondary-color;
+    display: none;
+    width: 17%;
+    padding: 15px 15px 15px 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .sub-tasks {
       background-color: $primary-color;
-      margin-top: 15px;
+
+      .sub-tasks-heading {
+        input {
+          padding: 0px 15px 0px 0px;
+        }
+  
+        .task-name {
+          width: 60%;
+          display: inline-block;
+        }
+      }
     }
 
-    .reminder {
-      margin-top: 15px;
+    ul {
+      li {
+        hr {
+          width: 80%;
+          margin-left: 40px;
+        }
+      }
     }
 
-    .reminder span {
-      display: block;
-      border-bottom-style: solid;
-      border-bottom-width: 1px;
-      background-color: $primary-color;
-    }
+    .extra-sub-tasks {
+      margin-top: 20px;
 
-    textarea {
-      margin-top: 15px;
+      span {
+        color: $category-color;
+      }
+
+      i {
+        width: 20px;
+      }
+
+      .extra-sub-task {
+        display: block;
+        background-color: $primary-color;
+        margin-top: 15px;
+      }
+
+      .reminder {
+        margin-top: 15px;
+
+        hr {
+          width: 80%;
+          margin-left: 50px;
+        }
+
+        span {
+          display: block;
+          background-color: $primary-color;
+        }
+      }
+
+      textarea {
+        margin-top: 15px;
+      }
     }
+  }
+
+  .expanded-right-container {
+    display: inline-block;
   }
 }

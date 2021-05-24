@@ -4,83 +4,100 @@
 }
 
 body {
-  background-color: #eeeeee;
+  font-family: "Segoe UI";
+  background-color: #f0f0f0;
 }
 
-input {
+body input {
   outline: none;
   border: none;
   font-size: 15px;
 }
 
-i {
+body i {
   padding: 15px 15px 15px 15px;
 }
 
-.navigation-bar {
+body ul {
+  list-style-type: none;
+}
+
+body .navigation-bar {
   height: auto;
   background-color: #1386ec;
-  padding: 15px 15px 15px 15px;
 }
 
-.navigation-bar .search-bar {
+body .navigation-bar i, body .navigation-bar span {
+  color: #ffff;
+}
+
+body .navigation-bar .search-bar {
   display: inline-block;
-  background-color: #ffff;
-  margin-left: 33%;
+  background-color: #03c8fc;
+  margin-left: 30%;
+  width: 25%;
 }
 
-.navigation-bar .fa-cog {
-  margin-left: 32%;
+body .navigation-bar .search-bar .search-icon {
+  color: #1386ec;
+  padding: 5px;
 }
 
-.navigation-bar span {
+body .navigation-bar .search-bar input {
+  background-color: #03c8fc;
+}
+
+body .navigation-bar .setting-icon {
+  margin-left: 27%;
+}
+
+body .navigation-bar span {
   font-size: 20px;
 }
 
-.left-container {
+body i {
+  color: #5e5d5f;
+}
+
+body ul li {
+  color: #5e5d5f;
+}
+
+body .left-container {
   display: inline-block;
   vertical-align: top;
-  background-color: #eeeeee;
-  height: 650px;
+  background-color: #f0f0f0;
+  height: auto;
   width: 17%;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-.left-container i {
-  width: 7%;
+body .left-container i {
+  width: 20px;
 }
 
-.left-container ul {
-  list-style-type: none;
-}
-
-.left-container ul li:hover {
-  background-color: #1386ec;
+body .left-container ul li:hover {
+  background-color: #ffff;
   cursor: pointer;
 }
 
-.left-container .custom-categories input {
-  background-color: #eeeeee;
+body .left-container .custom-categories input {
+  background-color: #f0f0f0;
 }
 
-input[type="checkbox"] {
+body input[type="checkbox"] {
   margin: 15px 15px 15px 15px;
 }
 
-input[type="checkbox"]:checked + span {
+body input[type="checkbox"]:checked + span {
   text-decoration: line-through;
 }
 
-h3 {
-  padding: 15px 15px 15px 15px;
-  color: #1386ec;
-}
-
-.middle-container {
+body .middle-container {
   display: inline-block;
   vertical-align: top;
-  height: 650px;
+  height: 680px;
   width: 80.5%;
   background-color: #ffff;
   padding: 15px 15px 15px 15px;
@@ -88,30 +105,34 @@ h3 {
   overflow-x: hidden;
 }
 
-.middle-container ul {
-  list-style-type: none;
-  background-color: #ffff;
+body .middle-container .category-name {
+  padding: 15px;
+  display: block;
 }
 
-.middle-container ul li {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+body .middle-container ul li {
+  border-bottom: 1px solid;
 }
 
-.middle-container ul li:hover {
-  background-color: #1386ec;
+body .middle-container ul li:hover {
+  background-color: #f0f0f0;
   cursor: pointer;
 }
 
-.middle-container ul li span {
+body .middle-container ul li span {
   display: inline-block;
   width: 90%;
+  padding: 10px;
 }
 
-.right-container {
+body .shrunk-middle-container {
+  width: 61.5%;
+}
+
+body .right-container {
   display: inline-block;
   vertical-align: top;
-  background-color: #eeeeee;
+  background-color: #f0f0f0;
   display: none;
   width: 17%;
   padding: 15px 15px 15px 15px;
@@ -119,50 +140,61 @@ h3 {
   overflow-x: hidden;
 }
 
-.right-container .new-sub-task {
-  background-color: #eeeeee;
-}
-
-.right-container h3 input {
-  margin: 0px 15px 0px 0px;
-}
-
-.right-container ul {
-  list-style-type: none;
+body .right-container .sub-tasks {
   background-color: #ffff;
 }
 
-.right-container ul li {
-  border-bottom-style: solid;
-  border-width: 1px;
+body .right-container .sub-tasks .sub-tasks-heading input {
+  padding: 0px 15px 0px 0px;
 }
 
-.right-container .extra-sub-tasks {
+body .right-container .sub-tasks .sub-tasks-heading .task-name {
+  width: 60%;
+  display: inline-block;
+}
+
+body .right-container ul li hr {
+  width: 80%;
+  margin-left: 40px;
+}
+
+body .right-container .extra-sub-tasks {
   margin-top: 20px;
 }
 
-.right-container .extra-sub-tasks i {
-  width: 10%;
+body .right-container .extra-sub-tasks span {
+  color: #5e5d5f;
 }
 
-.right-container .extra-sub-tasks .extra-sub-task {
+body .right-container .extra-sub-tasks i {
+  width: 20px;
+}
+
+body .right-container .extra-sub-tasks .extra-sub-task {
   display: block;
   background-color: #ffff;
   margin-top: 15px;
 }
 
-.right-container .extra-sub-tasks .reminder {
+body .right-container .extra-sub-tasks .reminder {
   margin-top: 15px;
 }
 
-.right-container .extra-sub-tasks .reminder span {
+body .right-container .extra-sub-tasks .reminder hr {
+  width: 80%;
+  margin-left: 50px;
+}
+
+body .right-container .extra-sub-tasks .reminder span {
   display: block;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
   background-color: #ffff;
 }
 
-.right-container .extra-sub-tasks textarea {
+body .right-container .extra-sub-tasks textarea {
   margin-top: 15px;
+}
+
+body .expanded-right-container {
+  display: inline-block;
 }
 /*# sourceMappingURL=styles.css.map */
