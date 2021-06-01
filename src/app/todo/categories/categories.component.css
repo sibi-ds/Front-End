@@ -1,0 +1,19 @@
+.row {
+    height: 699px;
+    background-color: #f0f0f0;
+}
+
+.row i {
+    width: 15%;
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+}
+
+.li:hover {
+  background-color: #ffff;
+  cursor: pointer;
+}

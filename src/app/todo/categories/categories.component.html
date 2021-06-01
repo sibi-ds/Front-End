@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="">
+        <div class="ul pt-2">
+            <div class="li py-3" *ngFor="let category of categories">
+                <i class="{{category.icon}}"></i>
+                <span (click)="showTasks(category.name)">{{category.name}}</span>
+            </div>
+        </div>
+
+        <div class="py-3">
+            <i class="fas fa-plus"></i>
+            <input type="text" placeholder="New List" (keyup.enter) = "addCategory()" [(ngModel)]="categoryName">
+        </div>
+    </div>
+</div>
