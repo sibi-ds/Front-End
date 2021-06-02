@@ -9,6 +9,7 @@ import { ActionsService } from '../actions.service';
 })
 export class SubTasksComponent implements OnInit {
 
+  isTaskPresent = false;
   categoryName !: string;
   taskName !: string;
   subTaskName !: string;
@@ -19,6 +20,12 @@ export class SubTasksComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(task => {
+      if (task.taskName !== undefined) {
+        this.isTaskPresent = true;
+      } else {
+        this.isTaskPresent = false;
+      }
+
       this.categoryName = task.categoryName;
       this.taskName = task.taskName;
       this.subTasks = this.actionsService.getSubTasks();

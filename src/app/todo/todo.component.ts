@@ -6,16 +6,11 @@ import { ActionsService } from './actions.service';
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css']
 })
+
 export class TodoComponent implements OnInit {
-  //isVisible = false;
 
   constructor(private actionsService : ActionsService) { }
 
   ngOnInit(): void {
   }
-
-  showTasksContainer() {
-    //this.isVisible =  this.actionsService.showTasksContainer;
-  }
-
 }

@@ -10,6 +10,7 @@ import { ActionsService } from '../actions.service';
 
 export class TasksComponent implements OnInit {
 
+  isCategoryPresent = false;
   categoryName = "";
   taskName = "";
   tasks : any = [];
@@ -20,6 +21,13 @@ export class TasksComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe(category => {
       this.categoryName = category.categoryName;
+
+      if (category.categoryName !== undefined) {
+        this.isCategoryPresent = true;
+      } else {
+        this.isCategoryPresent = false;
+      }
+
       this.actionsService.setCategoryName(this.categoryName);
       this.tasks = this.actionsService.getTasks();
     });

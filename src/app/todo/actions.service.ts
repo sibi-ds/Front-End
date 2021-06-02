@@ -3,9 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ActionsService {
 
-  showTasksContainer = false;
+export class ActionsService {
 
   constructor() { }
 
@@ -13,8 +12,7 @@ export class ActionsService {
     {
       name: "My Day",
       icon: "fas fa-sun",
-      // tasks: [{taskName:"sibi", subTasks: ["s","i"]}]
-      tasks: [{taskName:"sibi", subTasks: []}]
+      tasks: []
     },
 
     {
@@ -48,10 +46,20 @@ export class ActionsService {
   categoryName !: string;
   taskName !: string;
 
+  /**
+   * renders the categories
+   * 
+   * @returns categories
+   */
   getCategories() {
     return this.categories;
   }
 
+  /**
+   * add a new category to the category list
+   * 
+   * @param categoryName name of the category
+   */
   addCategory(categoryName: string) {
     if (this.categories.some((category: any) => category.name === categoryName)) {
       alert("Category Name Already Exist");
@@ -72,6 +80,11 @@ export class ActionsService {
     this.categoryName = categoryName;
   }
 
+  /**
+   * add a task to a category
+   * 
+   * @param taskName name of the task
+   */
   addTask(taskName: string) {
     if (taskName === "") {
       alert("Task Name Can Not Be Empty");
@@ -88,9 +101,12 @@ export class ActionsService {
     }
   }
 
+  /**
+   * renders the tasks of a category
+   * 
+   * @returns tasks of a category
+   */
   getTasks() {
-    this.showTasksContainer = true;
-    console.log(this.showTasksContainer);
     for (let i = 0 ; i < this.categories.length ; i++) {
       if (this.categories[i].name === this.categoryName) {
         this.tasks = this.categories[i].tasks;
@@ -105,6 +121,11 @@ export class ActionsService {
     this.taskName = taskName;
   }
 
+  /**
+   * add a subtask to a task
+   * 
+   * @param subTaskName name of the sub task
+   */
   addSubTask(subTaskName: string) {
     this.categories.forEach((category : any) => {
       if (category.name === this.categoryName) {
@@ -117,6 +138,11 @@ export class ActionsService {
     })
   }
 
+  /**
+   * renders the subtasks of a task
+   * 
+   * @returns subTasks sub tasks of a task
+   */
   getSubTasks() {
     this.categories.forEach((category : any) => {
       if (category.name === this.categoryName) {

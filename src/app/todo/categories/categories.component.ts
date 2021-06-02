@@ -25,7 +25,6 @@ export class CategoriesComponent implements OnInit {
   }
 
   showTasks(categoryName : string) {
-    this.actionsService.showTasksContainer = true;  
     this.actionsService.setCategoryName(this.categoryName);
     this.router.navigate(["todo/todo"], {queryParams: {categoryName : categoryName}});
   }

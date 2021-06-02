@@ -1,11 +1,11 @@
-<div class="row">
-    <span class="p-3">{{categoryName}}</span>
+<div class="row" *ngIf="isCategoryPresent">
+    <h5 class="p-3">{{categoryName}}</h5>
 
-    <span>
+    <div>
         <i class="fas fa-plus p-2"></i>
-        <input class="new-task" placeholder="Add Task" [(ngModel)]="taskName" (keyup.enter)="addTask()">
+        <input class="" placeholder="Add Task" [(ngModel)]="taskName" (keyup.enter)="addTask()">
         <hr>
-    </span>
+    </div>
 
     <div class="ul">
         <div class="li py-3 border-bottom" *ngFor="let task of tasks">
