@@ -1,9 +1,9 @@
-<div class="row" *ngIf="isCategoryPresent">
+<div class="row">
     <h5 class="p-3">{{categoryName}}</h5>
 
     <div>
         <i class="fas fa-plus p-2"></i>
-        <input class="" placeholder="Add Task" [(ngModel)]="taskName" (keyup.enter)="addTask()">
+        <input placeholder="Add Task" [(ngModel)]="taskName" (keyup.enter)="addTask()">
         <hr>
     </div>
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActionsService } from '../actions.service'
+import { TodoComponent } from '../todo.component';
 
 @Component({
   selector: 'app-categories',
@@ -10,7 +11,8 @@ import { ActionsService } from '../actions.service'
 
 export class CategoriesComponent implements OnInit {
 
-  constructor(private actionsService: ActionsService, private router: Router) { }
+  constructor(private actionsService: ActionsService, private router: Router
+    , private todoComponent : TodoComponent) { }
 
   categories : any;
   categoryName = "";
@@ -25,6 +27,9 @@ export class CategoriesComponent implements OnInit {
   }
 
   showTasks(categoryName : string) {
+    console.log(this.todoComponent.rightContainer);
+    this.todoComponent.rightContainer = "d-none";
+    this.todoComponent.middleContainer = "col-10";
     this.actionsService.setCategoryName(this.categoryName);
     this.router.navigate(["todo/todo"], {queryParams: {categoryName : categoryName}});
   }

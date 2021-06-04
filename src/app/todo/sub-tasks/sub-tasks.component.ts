@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ActionsService } from '../actions.service';
+import { TodoComponent } from '../todo.component';
 
 @Component({
   selector: 'app-sub-tasks',
@@ -9,23 +10,16 @@ import { ActionsService } from '../actions.service';
 })
 export class SubTasksComponent implements OnInit {
 
-  isTaskPresent = false;
   categoryName !: string;
   taskName !: string;
   subTaskName !: string;
   subTasks : any = [];
 
   constructor(private route: ActivatedRoute, private router: Router
-    , private actionsService : ActionsService) { }
+    , private actionsService : ActionsService, private todoComponent: TodoComponent) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(task => {
-      if (task.taskName !== undefined) {
-        this.isTaskPresent = true;
-      } else {
-        this.isTaskPresent = false;
-      }
-
       this.categoryName = task.categoryName;
       this.taskName = task.taskName;
       this.subTasks = this.actionsService.getSubTasks();

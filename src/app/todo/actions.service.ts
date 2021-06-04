@@ -89,9 +89,6 @@ export class ActionsService {
     if (taskName === "") {
       alert("Task Name Can Not Be Empty");
     } else {
-      console.log(taskName)
-      console.log(this.categoryName)
-      console.log(this.categories);
       for (let i = 0 ; i < this.categories.length ; i++) {
         if (this.categories[i].name === this.categoryName) {
           this.categories[i].tasks.push({ taskName : taskName, subTasks : [] });
